@@ -66,6 +66,8 @@ Some additional experiments available in jupyter notebooks, that starts with `QA
 2) ```Python scripts```
 Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
 
+Note: trie file adds an opporunity to take into account graph structure during T5 generation process.
+
 Some results presented in presentations:
 Results of MC dropout model uncertainty experiments ( Ensemble score, Ensemble delta, Expected entropy, Predictive entropy, BALD, EPKL, RMI) are available in `mc_dropout_experiments_uncertainty.pptx`
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
