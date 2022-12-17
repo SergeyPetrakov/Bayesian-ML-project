@@ -131,7 +131,7 @@ I can say that reached initial objectives. I conducted many experiments on entit
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
 
 
-# KBQA via t5
+# KBQA via T5
 
 This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model. More about experiments you can observe in jupyter notebooks, that starts with `QA`.
 
