@@ -144,7 +144,7 @@ We conducted experiments with several single unceratinty measures: `Entropy`, `M
 Since T5 model was taken from Hugging Face one can easily quickstart.
 "Run all" notebooks for uncertainty experiments are available. 
 For single models: 
-For ensemble models:
+For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
 
 
 Some experiments available in jupyter notebooks, that starts with `QA`.
