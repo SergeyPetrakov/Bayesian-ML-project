@@ -20,9 +20,36 @@ uncertainty estimates can be used to study the
 behavior of the model when answering different
 types of questions.
 
+All theory and results are discribed in `document`.
+
 This repository will be devided on 2 parts:
-1) Multilingual EL as a sufficient module of QA system based on mGENRE.
-2) End-to-end KBQA model based on T5.
+1) End-to-end KBQA model based on T5.
+2) Multilingual EL as a sufficient module of QA system based on mGENRE.
+
+# KBQA via T5
+
+
+This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model.
+We follow the article https://arxiv.org/abs/2002.08910 and use T5 as a base model for question answering task. It operates with KB and works as a seq-to-seq model.
+
+## Experiments with Uncertainty estimations with T5.
+
+We conducted experiments with several single unceratinty measures: `Entropy`, `Maxprob`, `Delta`. And we also conducted experiments with MC-Dropout-based ensemble metrics: `Ensemble score`, `Ensemble delta`, `Expected entropy`, `Predictive entropy`, `BALD`, `EPKL`, `RMI`. 
+
+Since T5 model was taken from Hugging Face one can easily quickstart.
+"Run all" notebooks for uncertainty experiments are available. 
+For single models: ```CLEAR_SINGLE_MODEL_UE_T5.ipynb```
+For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
+
+Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
+
+Some additional experiments available in jupyter notebooks, that starts with `QA`.
+
+You can reproduce experiments with examples from jupyter notebooks.
+Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
+
+
+
 
 
 
@@ -129,26 +156,3 @@ File `3_dataset_experiments.pdf` contains rejection curves - visual illustration
 ### Conclusion on Multilingual Entity Linking part
 I can say that reached initial objectives. I conducted many experiments on entity linking and question answering task for mGENRE model, observed different datasets, types of questions (with single answer or potentially not one answer), checked different languages, quantified uncertainty using various metrics, such as entropy, maxprob, delta, predictive entropy, expected entropy and BALD. Provided quantifiable and comparable results using area under rejective curve approach.
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
-
-
-# KBQA via T5
-
-
-This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model.
-We follow the article https://arxiv.org/abs/2002.08910 and use T5 as a base model for question answering task. It operates with KB and works as a seq-to-seq model.
-
-## Experiments with Uncertainty estimations with T5.
-
-We conducted experiments with several single unceratinty measures: `Entropy`, `Maxprob`, `Delta`. And we also conducted experiments with MC-Dropout-based ensemble metrics: `Ensemble score`, `Ensemble delta`, `Expected entropy`, `Predictive entropy`, `BALD`, `EPKL`, `RMI`. 
-
-Since T5 model was taken from Hugging Face one can easily quickstart.
-"Run all" notebooks for uncertainty experiments are available. 
-For single models: ```CLEAR_SINGLE_MODEL_UE_T5.ipynb```
-For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
-
-Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
-
-Some additional experiments available in jupyter notebooks, that starts with `QA`.
-
-You can reproduce experiments with examples from jupyter notebooks.
-Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
