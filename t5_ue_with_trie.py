@@ -57,7 +57,7 @@ t5_qa_model.to(device)
 
 
 ########## data for establish relations with words and wikidata ids
-##! wget https://dl.fbaipublicfiles.com/GENRE/lang_title2wikidataID-normalized_with_redirect.pkl    
+! wget https://dl.fbaipublicfiles.com/GENRE/lang_title2wikidataID-normalized_with_redirect.pkl    
 with open("lang_title2wikidataID-normalized_with_redirect.pkl", "rb") as f:
     lang_title2wikidataID = pickle.load(f)
 
