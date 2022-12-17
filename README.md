@@ -143,11 +143,12 @@ We conducted experiments with several single unceratinty measures: `Entropy`, `M
 
 Since T5 model was taken from Hugging Face one can easily quickstart.
 "Run all" notebooks for uncertainty experiments are available. 
-For single models: 
+For single models: ```CLEAR_SINGLE_MODEL_UE_T5.ipynb```
 For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
 
+Since some operations require significant amount of time even with GPU file 
 
-Some experiments available in jupyter notebooks, that starts with `QA`.
+Some additional experiments available in jupyter notebooks, that starts with `QA`.
 
 You can reproduce experiments with examples from jupyter notebooks.
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
