@@ -146,7 +146,7 @@ Since T5 model was taken from Hugging Face one can easily quickstart.
 For single models: ```CLEAR_SINGLE_MODEL_UE_T5.ipynb```
 For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
 
-Since some operations require significant amount of time even with GPU file 
+Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
 
 Some additional experiments available in jupyter notebooks, that starts with `QA`.
 
