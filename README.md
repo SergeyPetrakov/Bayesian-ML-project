@@ -1,40 +1,7 @@
-# Uncertainty as a tool to boost Knowledge based question answering
+# mGENRE Multilingual Entity Linking
 
-This repository contains files and materials about final project on BMML 2022 Skoltech course. 
-
-Questions Answering (QA) is one of the most
-widespread tasks in Natural Language Process-
-ing (NLP). Knowledge Base (KB) is one of the
-approaches that helps to extract answers more ac-
-curately. This work focuses on the application of
-uncertainty estimation to extend the capabilities
-of the KBQA system. Using uncertainty estima-
-tion techniques, it is possible to sort answers by
-confidence and filter those questions for which
-the model is less confident. It is demonstrated
-that uncertainty can enhance the performance of
-end-to-end KBQA system and a particular module
-of such system – Entity Linker. Experiments in-
-cluded various uncertainty estimation approaches
-based on single model and ensemble estimations
-on different QA datasets. It is also shown that
-uncertainty estimates can be used to study the
-behavior of the model when answering different
-types of questions.
-
-This repository contains 2 parts: 
-1) Application of UE to Multilingual Entity Linker based on mGENRE.
-2) End-to-end KBQA system based on T5.
-
-
-# Multilingual EL
-
-This part contains files and materials related to multilingual entity linking task (MEL),
-especially basing on the mGENRE model since it is SOTA model. We consider MEL as a part of big
-knowledge base question answering (KBQA) that is called information retrieval part. Within this
-part we retrieve entities. Basing on them we can make queries to knowledge base. Thus, we obtain KBQA system.
-It is based on https://arxiv.org/abs/2103.12528 where mGENRE model is proposed.
-
+This repository contains files and materials related to multilingual entity linking task (MEL), especially basing on the mGENRE model since it is SOTA model. We consider MEL as a part of big knowledge base question answering (KBQA) that is called information retrieval part. Within this part we retrieve entities. Basing on them we can make queries to knowledge base. Thus, we obtain KBQA system.
+This part is based on https://arxiv.org/abs/2103.12528 where mGENRE model is proposed.
 
 
 
@@ -136,11 +103,7 @@ I can say that reached initial objectives. I conducted many experiments on entit
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
 
 
-# End-to-end KBQA model
-
-This part contains information about end-to-end QA model based on T5 model.
-
-## T5 Question Answering
+# T5 Question Answering
 
 This repository also contains Uncertainty Estimation expiriments with T5 model. More about experiments you can observe in jupyter notebooks, that starts with `QA`.
 
