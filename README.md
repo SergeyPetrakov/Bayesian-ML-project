@@ -94,13 +94,13 @@ In command line run the folllowing six commands:
 
 1) set new environment `conda create --name new_environment`
 2) activate new environment `conda activate new_environment`
-3) clone repository `git clone https://github.com/SergeyPetrakov/mGENRE_MEL`
-4) go to the cloned repository `cd mGENRE_MEL`
+3) clone repository `git clone https://github.com/SergeyPetrakov/Bayesian_ML_project`
+4) go to the cloned repository `cd Bayesian_ML_project`
 5) install requirements `pip install -r requirements.txt`
 6) launch jupyter notebook (for example: `jupyter notebook --ip 0.0.0.0 --port=7643 --no-browser --allow-root&`)
 and open mgenre_final there (paste in browser web link and open file)
 
-Necessary data and pretrained model jupyter notebook contain in cell `data`. If you once installed it you do not really need run this cell further.
+Necessary data and pretrained model jupyter notebook ```mGENRE_and_Uncertainty_Estimation.ipynb```contain in cell `data`. If you once installed it you do not really need run this cell further.
 We strongly recommend to follow the original article and repository to understand how everything works from the inside.
 
 ## Experiments with Uncertainty estimations with mGENRE
