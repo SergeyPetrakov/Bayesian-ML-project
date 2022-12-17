@@ -92,6 +92,8 @@ For RuBQ 2.0 we observe the following results:
 - Eentropy perform very well at low rejection rates
 - Model fails on questions w/o answer
 
+5) Gain from using trie during hypothesis generation is very negligable.
+6) Changing dropout rate reduces results.
 
 
 
