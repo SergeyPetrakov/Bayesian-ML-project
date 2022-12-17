@@ -36,16 +36,25 @@ We follow the article https://arxiv.org/abs/2002.08910 and use T5 as a base mode
 
 We conducted experiments with several single unceratinty measures: `Entropy`, `Maxprob`, `Delta`. And we also conducted experiments with MC-Dropout-based ensemble metrics: `Ensemble score`, `Ensemble delta`, `Expected entropy`, `Predictive entropy`, `BALD`, `EPKL`, `RMI`. 
 
+for data loading run command: `cp -r data/. .`
+
 Since T5 model was taken from Hugging Face one can easily quickstart.
-"Run all" notebooks for uncertainty experiments are available. 
+
+There are two ways to reproduce results: 
+
+1) ```Jupyter notebooks```
+"Run all" notebooks for uncertainty experiments with all sufficient information are available. 
 For single models: ```CLEAR_SINGLE_MODEL_UE_T5.ipynb```
 For ensemble models: ```CLEAR_MC_DROPOUT_UE_T5.ipynb```
 
-Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
-
 Some additional experiments available in jupyter notebooks, that starts with `QA`.
 
-You can reproduce experiments with examples from jupyter notebooks.
+
+2) ```Python scripts```
+Since some operations require significant amount of time even with GPU file there are added `t5_ue.py` and `t5_ue_with_trie.py` in order to launch them using `nohup python3 t5_ue.py > t5_ue.out &`. After that all necessary tables and figures will be saved automatically in working folder.
+
+Some results presented in presentations:
+Results of MC dropout model uncertainty experiments ( Ensemble score, Ensemble delta, Expected entropy, Predictive entropy, BALD, EPKL, RMI) are available in `mc_dropout_experiments_uncertainty.pptx`
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
 
 
