@@ -40,8 +40,8 @@ Highly recommend to launch mGENRE using docker:
 0) Clone repository
 
 ```bash
-git clone https://github.com/SergeyPetrakov/Bayesian-ML-project
-cd Experiments_with_UE
+git clone https://github.com/SergeyPetrakov/Bayesian_ML_project
+cd Bayesian_ML_project
 ```
 
 1) Run docker container
