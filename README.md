@@ -1,8 +1,36 @@
-# mGENRE Multilingual Entity Linking
+# Uncertainty as a tool to boost Knowledge based question answering
 
-This repository contains files and materials related to multilingual entity linking task (MEL), especially basing on the mGENRE model since it is SOTA model. We consider MEL as a part of big knowledge base question answering (KBQA) that is called information retrieval part. Within this part we retrieve entities. Basing on them we can make queries to knowledge base. Thus, we obtain KBQA system.
+Questions Answering (QA) is one of the most
+widespread tasks in Natural Language Process-
+ing (NLP). Knowledge Base (KB) is one of the
+approaches that helps to extract answers more ac-
+curately. This work focuses on the application of
+uncertainty estimation to extend the capabilities
+of the KBQA system. Using uncertainty estima-
+tion techniques, it is possible to sort answers by
+confidence and filter those questions for which
+the model is less confident. It is demonstrated
+that uncertainty can enhance the performance of
+end-to-end KBQA system and a particular module
+of such system – Entity Linker. Experiments in-
+cluded various uncertainty estimation approaches
+based on single model and ensemble estimations
+on different QA datasets. It is also shown that
+uncertainty estimates can be used to study the
+behavior of the model when answering different
+types of questions.
+
+This repository will be devided on 2 parts:
+1) Multilingual EL as a sufficient module of QA system based on mGENRE.
+2) End-to-end KBQA model based on T5.
+
+
+
+
+# Multilingual Entity Linking via mGENRE
+
+This part contains files and materials related to multilingual entity linking task (MEL), especially basing on the mGENRE model since it is SOTA model. We consider MEL as a part of big knowledge base question answering (KBQA) that is called information retrieval part. Within this part we retrieve entities. Basing on them we can make queries to knowledge base. Thus, we obtain KBQA system.
 This part is based on https://arxiv.org/abs/2103.12528 where mGENRE model is proposed.
-
 
 
 ## Quickstart mGENRE
@@ -103,9 +131,9 @@ I can say that reached initial objectives. I conducted many experiments on entit
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
 
 
-# T5 Question Answering
+# KBQA via t5
 
-This repository also contains Uncertainty Estimation expiriments with T5 model. More about experiments you can observe in jupyter notebooks, that starts with `QA`.
+This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model. More about experiments you can observe in jupyter notebooks, that starts with `QA`.
 
 You can reproduce experiments with examples from jupyter notebooks.
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
