@@ -107,7 +107,7 @@ We strongly recommend to follow the original article and repository to understan
 
 Experiments are provided in `mGENRE_and_Uncertainty_Estimation.ipynb` file, you can find there:
  - Quickstart
- - Experiments with uncertainty estimation using metrics: `Entropy` on a single model, `Delta`, `Maxprob`, `Predicted entropy`, `Expected entropy` and `BALD` on `Simple Questions`, `RuBQ 2.0` and `Mewsli-9` datasets
+ - Experiments with uncertainty estimation using metrics: `Entropy` on a single model, `Delta`, `Maxprob`, `Predictive entropy`, `Expected entropy` and `BALD` on `Simple Questions`, `RuBQ 2.0` and `Mewsli-9` datasets
  
 File `mGENRE_and_UE.py` is also provided (repeat results from jupyter notebook `mGENRE_and_Uncertainty_Estimation.ipynb`). The advantage of .py files over jupyter notebooks is that one can launch them for example on the server and be sure in stability of connection for the whole period of experiment that may take hours.
  
@@ -119,7 +119,7 @@ File `mGENRE_and_UE.py` is also provided (repeat results from jupyter notebook `
 
 File `3_dataset_experiments.pdf` contains rejection curves - visual illustration of uncertainty estimation integration into mGENRE quality assessment. As a numerical measure of unsertainty estimation quality were added two types of ares under rejection curve: absolute (equals to the whole area under curve) and comparative (equals to the area that is higher than quality received on all samples of dataset).
 
-### Summary of results
+### Summary of results on Multilingual Entity Linking part
 
 - Experiments demonstrate that uncertainty quantification could be efficiently used for the task of entity linking in case of mGENRE model. This is especially obvious for English, German, Russian. Although there are cases when uncertainty estimation does not help, for example for Serbian and in some cases for Javanese, Japanese and Persian.
 - The structure of dataset also matters, because the structure differs, for example model may perform better on RUBQ 2.0 and Simple Questions because they consist of short questions of widespread languages (English and Russian).
@@ -127,13 +127,27 @@ File `3_dataset_experiments.pdf` contains rejection curves - visual illustration
 - Thus, mGENRE performs well on the task of entity linking even in multilingual case. But end-to-end question answering system could not be realized using only mGENRE, even if we help it with such strong NER as Stanza.
 
 ### Conclusion on Multilingual Entity Linking part
-I can say that reached initial objectives. I conducted many experiments on entity linking and question answering task for mGENRE model, observed different datasets, types of questions (with single answer or potentially not one answer), checked different languages, quantified uncertainty using various metrics, such as entropy, maxprob, delta, predicted entropy, expected entropy and BALD. Provided quantifiable and comparable results using area under rejective curve approach.
+I can say that reached initial objectives. I conducted many experiments on entity linking and question answering task for mGENRE model, observed different datasets, types of questions (with single answer or potentially not one answer), checked different languages, quantified uncertainty using various metrics, such as entropy, maxprob, delta, predictive entropy, expected entropy and BALD. Provided quantifiable and comparable results using area under rejective curve approach.
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
 
 
 # KBQA via T5
 
-This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model. More about experiments you can observe in jupyter notebooks, that starts with `QA`.
+
+This part contains Uncertainty Estimation expiriments with T5 model - end-to-end QA model.
+We follow the article https://arxiv.org/abs/2002.08910 and use T5 as a base model for question answering task. It operates with KB and works as a seq-to-seq model.
+
+## Experiments with Uncertainty estimations with T5.
+
+We conducted experiments with several single unceratinty measures: `Entropy`, `Maxprob`, `Delta`. And we also conducted experiments with MC-Dropout-based ensemble metrics: `Ensemble score`, `Ensemble delta`, `Expected entropy`, `Predictive entropy`, `BALD`, `EPKL`, `RMI`. 
+
+Since T5 model was taken from Hugging Face one can easily quickstart.
+"Run all" notebooks for uncertainty experiments are available. 
+For single models: 
+For ensemble models:
+
+
+Some experiments available in jupyter notebooks, that starts with `QA`.
 
 You can reproduce experiments with examples from jupyter notebooks.
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
