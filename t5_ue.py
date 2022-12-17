@@ -39,7 +39,7 @@ nlp = spacy.load("en_core_web_sm")
 client = wikidata.client.Client()
 
 ########## data for establish relations with words and wikidata ids
-##! wget https://dl.fbaipublicfiles.com/GENRE/lang_title2wikidataID-normalized_with_redirect.pkl    
+! wget https://dl.fbaipublicfiles.com/GENRE/lang_title2wikidataID-normalized_with_redirect.pkl    
 
 
     
