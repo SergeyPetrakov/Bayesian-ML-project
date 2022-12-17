@@ -72,6 +72,25 @@ Some results presented in presentations:
 Results of MC dropout model uncertainty experiments ( Ensemble score, Ensemble delta, Expected entropy, Predictive entropy, BALD, EPKL, RMI) are available in `mc_dropout_experiments_uncertainty.pptx`
 Results of sinlge model uncertainty experiments (Maxprob, Delta, Entropy) are available in `16_11_2022_baseline_acc_single_uncertainty.pptx`.
 
+## Results
+
+### Summary of results on UE T5 part.
+
+1) Single model-based metrics often demonstrate good performance. They outperform ensemble metrics on RuBQ 2.0 dataset and SQ in graph part.
+2) Almost each time score is the best Single model-based metric from Single model-based metrics.
+3) Ensemdle-based models outperform single-based models only on SQ full test dataset. 
+
+For Simple Questions we observe the following results:
+- Expected entropy – worse behavior on high rejection rates
+- Predictive entropy, EPKL, BALD stable and very similar
+- Best performance (especially for low rejection rates) for Delta, Maxprob and Eentropy. (All of them perform worse on high rejection rates)
+
+For RuBQ 2.0 we observe the following results:
+- Expected entropy – worse behavior on high rejection rates
+- Predictive entropy, EPKL, BALD stable and very similar, but gain is small.
+- Best performance by Delta, Maxprob
+- Eentropy perform very well at low rejection rates
+- Model fails on questions w/o answer
 
 
 
