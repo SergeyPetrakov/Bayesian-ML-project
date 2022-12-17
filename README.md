@@ -36,9 +36,22 @@ We follow the article https://arxiv.org/abs/2002.08910 and use T5 as a base mode
 
 We conducted experiments with several single unceratinty measures: `Entropy`, `Maxprob`, `Delta`. And we also conducted experiments with MC-Dropout-based ensemble metrics: `Ensemble score`, `Ensemble delta`, `Expected entropy`, `Predictive entropy`, `BALD`, `EPKL`, `RMI`. 
 
-for data loading run command: `cp -r data/. .`
+## Quickstart T5
 
-Since T5 model was taken from Hugging Face one can easily quickstart.
+0) Clone repository
+
+```bash
+git clone https://github.com/SergeyPetrakov/Bayesian_ML_project
+cd Bayesian_ML_project
+```
+
+1) data copy command
+
+```cp -r data/. .```
+
+2) Choose any way of reproducing
+
+Since T5 model was taken from Hugging Face one can easily launched.
 
 There are two ways to reproduce results: 
 
