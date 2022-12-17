@@ -126,7 +126,7 @@ File `3_dataset_experiments.pdf` contains rejection curves - visual illustration
 - There is no significant leader in terms of metric of uncertainty, but every time both for absolute area under rejection curve and area under curve added by uncertainty integration predicted entropy showed the best results among all metrics almost each time as for information received on aggregated AUC data.
 - Thus, mGENRE performs well on the task of entity linking even in multilingual case. But end-to-end question answering system could not be realized using only mGENRE, even if we help it with such strong NER as Stanza.
 
-### Conclusion
+### Conclusion on Multilingual Entity Linking part
 I can say that reached initial objectives. I conducted many experiments on entity linking and question answering task for mGENRE model, observed different datasets, types of questions (with single answer or potentially not one answer), checked different languages, quantified uncertainty using various metrics, such as entropy, maxprob, delta, predicted entropy, expected entropy and BALD. Provided quantifiable and comparable results using area under rejective curve approach.
 Talking about the ways how one can take benefits from it, I can say that method of voting algorithms can be used, when we take some algorithms, mark answers they give with some uncertainty measure and choose the answer of the most confident algorithm among all.
 
