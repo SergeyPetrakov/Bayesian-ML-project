@@ -1,4 +1,4 @@
-# Uncertainty as a tool to boost Knowledge based question answering
+# Uncertainty Enhances Knowledge Base Question Answering
 
 Questions Answering (QA) is one of the most
 widespread tasks in Natural Language Process-
