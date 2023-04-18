@@ -41,8 +41,8 @@ We conducted experiments with several single unceratinty measures: `Entropy`, `M
 0) Clone repository
 
 ```bash
-git clone https://github.com/SergeyPetrakov/Bayesian_ML_project
-cd Bayesian_ML_project
+git clone https://github.com/SergeyPetrakov/Master_thesis
+cd Master_thesis
 ```
 
 1) data copy command
